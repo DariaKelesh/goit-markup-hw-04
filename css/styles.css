@@ -152,6 +152,9 @@ img {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.71;
@@ -165,6 +168,11 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
+}
+
+.contacts-icon {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 /* Hero */
@@ -219,6 +227,7 @@ img {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .section-subtitle {
@@ -252,38 +261,20 @@ img {
   margin-right: 30px;
 }
 
-.advantages-item::before {
-  display: inline-block;
-  content: "";
-  width: 270px;
-  height: 120px;
-  border-radius: 4px;
-  background-color: #f5f4fa;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-}
-.advantages-item:nth-child(1)::before {
-  background-image: url(../images/advantages1.png);
-}
-
-.advantages-item:nth-child(2)::before {
-  background-image: url(../images/advantages2.png);
-}
-.advantages-item:nth-child(3)::before {
-  background-image: url(../images/advantages3.png);
-}
-.advantages-item:nth-child(4)::before {
-  background-image: url(../images/advantages4.png);
+.advantages-wrap {
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 /* FEATURES */
 .features {
   padding-top: 0;
-}
-
-.features-title {
-  margin-bottom: 50px;
 }
 
 .features-wrap {
@@ -315,10 +306,6 @@ img {
   margin-right: 30px;
 }
 
-.team-title {
-  margin-bottom: 50px;
-}
-
 .team-container {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -336,6 +323,70 @@ img {
 
 .team-member-pos {
   font-size: 16px;
+}
+
+.team-social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.team-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}  
+.team-social-link:hover, .team-social-link:focus {
+background-color: var(--accent-color);
+}
+
+.team-social-link:hover .team-social-icon, .team-social-link:focus .team-social-icon {
+    fill: #fff;  
+}
+
+.team-social-item + .team-social-item {
+    margin-left: 10px;
+}
+
+.team-social-icon {
+    fill:#AFB1B8;
+}
+
+/* OUR CLIENTS */
+.our-clients-list {
+    display: flex;
+    justify-content: center;
+}
+.our-clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.our-clients-link:hover,
+.our-clients-link:focus {
+    border: 1px solid var(--accent-color);
+}
+.our-clients-item + .our-clients-item {
+    margin-left: 30px;
+}
+
+.our-clients-icon {
+    fill: #AFB1B8;
+}
+
+.our-clients-icon:hover, 
+.our-clients-icon:focus {
+    fill: var(--accent-color);
 }
 
 /* Footer */
@@ -404,36 +455,6 @@ img {
 .footer-social-icon {
     fill: #ffffff;
 }
-
-
-
-/* .footer-social-item:nth-child(1) {
-  background-image: url(../images/instagram-footer.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.footer-social-item:nth-child(2) {
-  background-image: url(../images/twitter-footer.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.footer-social-item:nth-child(3) {
-  background-image: url(../images/facebook-footer.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.footer-social-item:nth-child(4) {
-  margin-right: 0;
-
-  background-image: url(../images/linkedin-footer.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer-social-item:hover,
-.footer-social-item:focus {
-  background-color: var(--accent-color);
-} */
 
 .footer-wrap {
   display: flex;
